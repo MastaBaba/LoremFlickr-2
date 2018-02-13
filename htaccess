@@ -1,0 +1,26 @@
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^rss/(y|m|d|h)/(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ rss.php?v1=$2&v2=$3&v3=$4&v4=$5&v5=$6&v6=$1 [QSA,L]
+RewriteRule ^rss/(y|m|d|h)/(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/?$ rss.php?v1=$2&v2=$3&v3=$4&v4=$5&v6=$1 [QSA,L]
+RewriteRule ^rss/(y|m|d|h)/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ rss.php?v1=$2&v2=$3&v3=$4&v4=$5&v6=$1 [QSA,L]
+RewriteRule ^rss/(y|m|d|h)/([0-9]+)/([0-9]+)/([^\/]+)/?$ rss.php?v1=$2&v2=$3&v3=$4&v6=$1 [QSA,L]
+RewriteRule ^rss/(y|m|d|h)/([0-9]+)/([0-9]+)/?$ rss.php?v1=$2&v2=$3&v6=$1 [QSA,L]
+
+RewriteRule ^daily/(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4&v5=$5&u=d [QSA,L]
+RewriteRule ^daily/(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4&u=d [QSA,L]
+RewriteRule ^daily/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4&u=d [QSA,L]
+RewriteRule ^daily/([0-9]+)/([0-9]+)/([^\/]+)/?$ image.php?v1=$1&v2=$2&v3=$3&u=d [QSA,L]
+RewriteRule ^daily/([0-9]+)/([0-9]+)/?$ image.php?v1=$1&v2=$2&u=d [QSA,L]
+
+RewriteRule ^s/1.0/([^/]*)/(g|p|red|green|blue|o)/([0-9]+)/([0-9]+)/([^\/]+|notag)/(any|all)/?$ image.php?v1=$2&v2=$3&v3=$4&v4=$5&v5=$6&v6=$1 [QSA,L]
+RewriteRule ^s/1.1/([^/]*)/(g|p|red|green|blue|o)/([0-9]+)/([0-9]+)/([^\/]+|notag)/(any|all)/?$ image.test.php?v1=$2&v2=$3&v3=$4&v4=$5&v5=$6&v6=$1 [QSA,L]
+
+RewriteRule ^(x)/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ image.001.php?v1=$1&v2=$2&v3=$3&v4=$4&v5=$5 [QSA,L]
+RewriteRule ^(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4&v5=$5 [QSA,L]
+RewriteRule ^(g|p|red|green|blue)/([0-9]+)/([0-9]+)/([^\/]+)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4 [QSA,L]
+RewriteRule ^([0-9]+)/([0-9]+)/([^\/]+)/(any|all)/?$ image.php?v1=$1&v2=$2&v3=$3&v4=$4 [QSA,L]
+RewriteRule ^([0-9]+)/([0-9]+)/([^\/]+)/?$ image.php?v1=$1&v2=$2&v3=$3 [QSA,L]
+RewriteRule ^([0-9]+)/([0-9]+)/?$ image.php?v1=$1&v2=$2 [QSA,L]

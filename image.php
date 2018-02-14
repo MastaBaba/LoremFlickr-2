@@ -63,7 +63,7 @@ $photosCount = count($photos["photo"]);
 
 if ($photosCount > 0) {
 	if (isset($fixedId)) {
-		$randomId = $fixedId % $photosCount;
+		$randomId = abs((int)$fixedId) % $photosCount;
 	}
 	else {
 		$randomId = rand(0, $photosCount - 1);

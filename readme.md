@@ -57,7 +57,9 @@ You can have some control of the image that's displayed. Include a lock query st
 Your browser might cache the images when you request the same URL multiple times on the same page. You can resolve this by adding a meaningless querystring to the URL. So, for example...
 
   https://your-website.com/320/240?random=1
+  
   https://your-website.com/320/240?random=2
+  
   https://your-website.com/320/240?random=3
 
 ## Credits

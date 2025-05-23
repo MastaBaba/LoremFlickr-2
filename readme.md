@@ -1,6 +1,6 @@
 # LoremFlickr
 
-LoremFlickr provides placeholder images for every case, web or print, on almost any subject, in any size. Visit https://loremflickr.com to see this in action.
+LoremFlickr provides placeholder images for every case, web or print, on almost any subject, in any size. Visit https://loremflickr.com for more details.
 
 ## How to install
 
